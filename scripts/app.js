@@ -1,6 +1,8 @@
 'use strict';
 
-function Project (input) {
-    
-
+function Project (inputObj) {
+    this.title = inputObj.title,
+    this.author = inputObj.author,
+    this.projectLink = inputObj.projectLink,
+    this.description = inputObj.description;
 }
