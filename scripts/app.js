@@ -6,3 +6,13 @@ function Project (inputObj) {
     this.projectLink = inputObj.projectLink,
     this.description = inputObj.description;
 }
+
+Project.prototype.toHtml = function() {
+    var $newProject = $('project.template').clone();
+    $newProject.removeClass('template');
+
+    $newProject.find('title').text(this.title);
+    $newProject.find('projectLink').html(this.projectLink);
+    $newProject.find('description').text(this.description);
+
+};
