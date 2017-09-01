@@ -22,3 +22,40 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+.icon-github:before {
+	content: "\e902";
+  }
+
+  .icon-twitter:before {
+	content: "\e900";
+	color: #1da1f2;
+  }
+
+  .icon-chat:before {
+	content: "\e96f";
+  }
+
+  .icon-hamburger:before {
+	content: "\e9bd";
+  }
+
+  .icon-amazon:before {
+	content: "\ea87";
+  }
+
+  .icon-twitch:before {
+	content: "\ea9f";
+  }
+
+  .icon-steam:before {
+	content: "\eaad";
+  }
+
+  .icon-linkedin:before {
+	content: "\eaca";
+  }
+
+  .icon-facebook:before {
+	content: "\e901";
+  }
