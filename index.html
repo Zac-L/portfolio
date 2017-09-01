@@ -8,6 +8,14 @@
         <link rel="stylesheet" type="text/css" href="styles/layout.css">
         <link rel="stylesheet" type="text/css" href="styles/icon.css">
         <title>Portfolio </title>
+        <script id="handle-template" type="text/x-handlebars-template">
+            <h1>{{title}}</h1>
+            <a href="{{projectLink}}"></a>
+            <div class="byline">
+              By <address>{{author}}</address>
+            </div>
+            <section>{{{description}}}</section>   
+          </script> 
     </head>
 
     <body>
