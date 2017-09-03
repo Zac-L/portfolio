@@ -25,3 +25,4 @@ Project.prototype.toHtml = function() {
     var html = template(this);
     return html;
 };
+
