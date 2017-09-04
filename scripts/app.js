@@ -22,10 +22,12 @@ function Project (projectData) {
 // };
 
 Project.prototype.toHtml = function() {
-    var source = $('#handle-template').html();
-    var template = Handlebars.compile(source);
-    var html = template(this);
-    return html;
+    var theTemplateScript = $('#handle-template').html();
+    var theTemplate = Handlebars.compile(theTemplateScript);
+    var compliedHtml = theTemplate(this);
+
+    $('#project-list').html(compliedHtml);
+    // return html;
 };
 
 Project.loadAll = function(projectData) {
