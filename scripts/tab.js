@@ -11,3 +11,15 @@ articleView.handleMainNav = function() {
     $('.main-nav .tab:first').click();
 };
 articleView.handleMainNav();
+
+
+///Testing this, atm it is still not working. 
+
+// function handleNav () {
+//     $('.tab').click( function(){
+//       $('.tab-content').hide();  
+//       var clickedTab = $(this).attr('data-content');
+//       $('#' + clickedTab).show();
+  
+//     })  
+//   }

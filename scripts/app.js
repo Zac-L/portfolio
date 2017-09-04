@@ -1,10 +1,12 @@
 'use strict';
 
-function Project (inputObj) {
-    this.title = inputObj.title,
-    this.author = inputObj.author,
-    this.projectLink = inputObj.projectLink,
-    this.description = inputObj.description;
+var projects = [];
+
+function Project (projectData) {
+    this.title = projectData.title,
+    this.author = projectData.author,
+    this.projectLink = projectData.projectLink,
+    this.description = projectData.description;
 }
 
 ////Saving for now, till I can get handlebars to work correctly. 
@@ -26,3 +28,30 @@ Project.prototype.toHtml = function() {
     return html;
 };
 
+Project.loadAll = function(projectData) {
+    
+        projectData.forEach(function(projectObject) {
+        projects.push(new Project(projectObject));
+        });
+    };
+        //Appends projects array to html
+        projects.forEach(function(projectTest) {
+        $('#project-list').append(projectTest.toHtml());
+    });
+
+
+Project.fetchAll = function() {
+        if(localStorage.projectData) {
+            Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
+        }
+        else {
+            $.getJSON('scripts/projectData.json')
+            .done(projectData => {
+              localStorage.setItem('projectData', JSON.stringify(projectData));
+              Project.loadAll(projectData)
+            })
+            .fail(() => {
+              alert(' haha ya im not working ');
+            });
+        }
+    }
