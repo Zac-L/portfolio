@@ -27,7 +27,7 @@ Project.prototype.toHtml = function() {
     var compliedHtml = theTemplate(this);
 
     $('#project-list').html(compliedHtml);
-    // return html;
+    // return compliedHtml;
 };
 
 Project.loadAll = function(projectData) {

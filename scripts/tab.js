@@ -1,5 +1,6 @@
 
 'use strict';
+
 var articleView = {};
 
 articleView.handleMainNav = function() {
