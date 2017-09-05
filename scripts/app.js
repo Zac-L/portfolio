@@ -31,29 +31,29 @@ Project.prototype.toHtml = function() {
 };
 
 Project.loadAll = function(projectData) {
-    
-        projectData.forEach(function(projectObject) {
-        projects.push(new Project(projectObject));
-        });
-    };
-        //Appends projects array to html
-        projects.forEach(function(projectTest) {
-        $('#project-list').append(projectTest.toHtml());
-    });
 
+    projectData.forEach(function(projectObject) {
+        projects.push(new Project(projectObject));
+    });
+};
+
+projects.forEach(function(projectTest) {
+    $('#project-list').append(projectTest.toHtml());
+});
 
 Project.fetchAll = function() {
-        if(localStorage.projectData) {
-            Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
-        }
-        else {
-            $.getJSON('scripts/projectData.json')
-            .done(projectData => {
-              localStorage.setItem('projectData', JSON.stringify(projectData));
-              Project.loadAll(projectData)
-            })
-            .fail(() => {
-              alert(' haha ya im not working ');
-            });
-        }
+    if(localStorage.projectData) {
+        Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
     }
+    else {
+        $.getJSON('scripts/projectData.json')
+            .done(function (projectData) {
+                console.log('Done!', projectData);
+                localStorage.setItem('projectData', JSON.stringify(projectData));
+                Project.loadAll(projectData);
+            })
+            .fail(function(){
+                alert(' haha ya im not working ');
+            });
+    }
+};
