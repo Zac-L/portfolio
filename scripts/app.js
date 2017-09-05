@@ -9,30 +9,18 @@ function Project (projectData) {
     this.description = projectData.description;
 }
 
-////Saving for now, till I can get handlebars to work correctly. 
-
-// Project.prototype.toHtml = function() {
-//     var $newProject = $('project.template').clone();
-//     $newProject.removeClass('template');
-
-//     $newProject.find('title').text(this.title);
-//     $newProject.find('projectLink').html(this.projectLink);
-//     $newProject.find('description').text(this.description);
-
-// };
-
 Project.prototype.toHtml = function() {
     var theTemplateScript = $('#handle-template').html();
     var theTemplate = Handlebars.compile(theTemplateScript);
     var compliedHtml = theTemplate(this);
 
-    $('#project-list').html(compliedHtml);
-    // return compliedHtml;
+    return compliedHtml;
 };
 
 projects.initIndexPage = function() {
     projects.forEach(function(projects) {
         $('#project-list').append(projects.toHtml());
+        console.log('what is', projects.toHtml());
     });
 };
 
@@ -43,14 +31,15 @@ Project.loadAll = function(projectData) {
     });
 };
 
-projects.forEach(function(projectTest) {
-    $('#project-list').append(projectTest.toHtml());
-});
+// projects.forEach(function(projectTest) {
+//     $('#project-list').append(projectTest.toHtml());
+// });
 
 Project.fetchAll = function() {
     if(localStorage.projectData) {
         Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
         projects.initIndexPage();
+        console.log('in the if statement');
     }
     else {
         $.getJSON('scripts/projectData.json')
@@ -68,3 +57,6 @@ Project.fetchAll = function() {
             });
     }
 };
+// $(document).ready(function(){
+
+// });
