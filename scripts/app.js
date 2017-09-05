@@ -30,6 +30,12 @@ Project.prototype.toHtml = function() {
     // return compliedHtml;
 };
 
+projects.initIndexPage = function() {
+    projects.forEach(function(projects) {
+        $('#project-list').append(projects.toHtml());
+    });
+};
+
 Project.loadAll = function(projectData) {
 
     projectData.forEach(function(projectObject) {
@@ -44,6 +50,7 @@ projects.forEach(function(projectTest) {
 Project.fetchAll = function() {
     if(localStorage.projectData) {
         Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
+        projects.initIndexPage();
     }
     else {
         $.getJSON('scripts/projectData.json')
@@ -51,9 +58,13 @@ Project.fetchAll = function() {
                 console.log('Done!', projectData);
                 localStorage.setItem('projectData', JSON.stringify(projectData));
                 Project.loadAll(projectData);
+                projects.initIndexPage();
             })
             .fail(function(){
                 alert(' haha ya im not working ');
+            })
+            .always(function(){
+                console.log('Always is working!');
             });
     }
 };
