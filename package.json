@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Zach's Portfolio Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zac-L/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Zach L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zac-L/portfolio/issues"
+  },
+  "homepage": "https://github.com/Zac-L/portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
