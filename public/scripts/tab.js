@@ -4,8 +4,9 @@
 var articleView = {};
 
 articleView.handleMainNav = function() {
-    $('.main-nav').on('click', '.tab', function() {
+    $('nav.main-nav').on('click', '.tab', function() {
         $('.tab-content').hide();
+        // var clickedTab = $(this).attr('data-content');
         $('#' + $(this).data('content')).fadeIn();
     });
 

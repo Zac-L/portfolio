@@ -31,10 +31,6 @@ Project.loadAll = function(projectData) {
     });
 };
 
-// projects.forEach(function(projectTest) {
-//     $('#project-list').append(projectTest.toHtml());
-// });
-
 Project.fetchAll = function() {
     if(localStorage.projectData) {
         Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
@@ -50,7 +46,7 @@ Project.fetchAll = function() {
                 projects.initIndexPage();
             })
             .fail(function(){
-                alert(' haha ya im not working ');
+                console.log(' haha ya im not working ');
             })
             .always(function(){
                 console.log('Always is working!');
