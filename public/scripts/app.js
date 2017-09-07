@@ -53,6 +53,3 @@ Project.fetchAll = function() {
             });
     }
 };
-// $(document).ready(function(){
-
-// });
