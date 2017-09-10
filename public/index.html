@@ -24,25 +24,26 @@
             <nav id="main-nav">
                 <span class="icon-menu"></span>
                     <ul>
-                        <li class="nav-item">Home </li>
-                        <li class="nav-item">About </li>
-                        <li class="nav-item">Projects</li>
-                        <li class="nav-item"><a href=" https://github.com/Zac-L">Contact</a></li>
+                        <li class="tab" data-content="home">Home </li>
+                        <li class="tab" data-content="about-content">About </li>
+                        <li class="tab" data-content="project-content">Projects</li>
+                        <li class=""><a href=" https://github.com/Zac-L">Contact</a></li>
                     </ul>
             </nav>
         </header>
 
         <main>
-            <h2>Projects</h2>
+            <section id="project-content" class="tab-content">
+                <h2>Projects</h2>
             
-            <article id="project-list">
+                <article id="project-list">
 
-            </article>
-
-
-            <section id="about">
+                </article>
+            </section>
+            
+            <section id="about-content" class="tab-content">
                 <h2>About me</h2>
-
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer arcu odio, fringilla a elementum aliquam, tincidunt quis dolor. Aliquam id rutrum diam, eu vestibulum sem. Cras id pulvinar sapien. Cras nec vestibulum orci, in iaculis magna. Vestibulum iaculis gravida ante fringilla molestie. Suspendisse potenti. Sed scelerisque turpis in nibh maximus accumsan. Etiam mattis laoreet condimentum. Vestibulum ut tempor dolor. Donec quis turpis interdum, venenatis tortor in, porttitor augue. Curabitur accumsan vel nibh quis tincidunt. Vestibulum vitae placerat est. Nam eget velit nec risus sollicitudin blandit. Vivamus maximus, leo a tristique feugiat, sapien ipsum molestie purus, sit amet bibendum orci erat non libero. Donec a turpis vel magna volutpat imperdiet vel nec lacus. Phasellus tincidunt dapibus ex in luctus.</p>
             </section>
         </main>
         <footer>
@@ -63,7 +64,7 @@
         <script src="vendors/jquery-3.2.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
         <script src="scripts/app.js"></script>
-        <!-- <script src="scripts/tab.js"></script> Saving till I can get this to work -->
+        <script src="scripts/tab.js"></script>
         <script> Project.fetchAll(); </script>
     </body>
 
