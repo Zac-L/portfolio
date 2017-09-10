@@ -1,5 +1,5 @@
 'use strict';
-console.log('I am in node')
+console.log('node had loaded!')
 
 const PORT = process.env.PORT || 3000;
 const express = require('express');
@@ -13,5 +13,5 @@ app.get('/', function(request, response ){
 });
 
 app.listen(PORT, function() {
-  console.log(`You are on ${PORT}`)
+  console.log(`You are on port: ${PORT}`)
 });
