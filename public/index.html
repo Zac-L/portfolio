@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <link href="https://cdnjs.com/libraries/normalize">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="styles/layout.css">
-        <link rel="stylesheet" type="text/css" href="styles/icon.css">
+        <link rel="stylesheet" type="text/css" href="/styles/icon.css">
+        <link rel="stylesheet" type="text/css" href="/styles/layout.css">
         <title>Portfolio </title>
         <script id="handle-template" type="text/x-handlebars-template">
             <h1>{{title}}</h1>
@@ -22,12 +22,12 @@
         <header>
                 <h1> Zachary Lichens</h1>
             <nav id="main-nav">
-                <span class="icon-menu"></span>
+                <span class="nav-menu"></span>
                     <ul>
-                        <li class="tab" data-content="home">Home </li>
-                        <li class="tab" data-content="about-content">About </li>
-                        <li class="tab" data-content="project-content">Projects</li>
-                        <li class=""><a href=" https://github.com/Zac-L">Contact</a></li>
+                        <li class="tab" data-content="home" href="home">Home </li>
+                        <li class="tab" data-content="about-content" href="/about">About </li>
+                        <li class="tab" data-content="project-content" href="/projects">Projects</li>
+                        <li class=""><a href=" https://github.com/Zac-L" href="#">Contact</a></li>
                     </ul>
             </nav>
         </header>
@@ -62,10 +62,11 @@
 
         </footer>
         <script src="vendors/jquery-3.2.1.js"></script>
+        <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
-        <script src="scripts/app.js"></script>
+        <script src="/scripts/models/app.js"></script>
         <script src="scripts/tab.js"></script>
-        <script> Project.fetchAll(); </script>
+        <script> app.Project.fetchAll(); </script>
     </body>
 
 

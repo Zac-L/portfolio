@@ -5,7 +5,7 @@
 /*MOBILE - fonts, navigation, images
 =======================================*/
 @media only screen and (min-width: 500px) {
-    .icon-menu {
+    .nav-menu {
       display: none;
     }
 }
