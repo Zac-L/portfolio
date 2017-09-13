@@ -15,9 +15,9 @@ var app = app || {};
     Project.prototype.toHtml = function() {
         var theTemplateScript = $('#handle-template').html();
         var theTemplate = Handlebars.compile(theTemplateScript);
-        var compliedHtml = theTemplate(this);
+        var compiledHtml = theTemplate(this);
 
-        return compliedHtml;
+        return compiledHtml;
     };
 
     projects.initIndexPage = function() {
