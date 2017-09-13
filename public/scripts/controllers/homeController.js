@@ -4,7 +4,7 @@ var app = app || {};
 (function(module) {
   const homeController = {};
 
-  homeController.init = function () {
+  homeController.init = () => {
     $('.tab-content').hide();
     $('#home-content').show();
   }
