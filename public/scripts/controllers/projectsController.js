@@ -2,12 +2,13 @@
 var app = app || {};
 
 (function(module) {
-  const projectController = {};
+  const projectsController = {};
 
-  projectController.init = () => {
+  projectsController.init = () => {
+    console.log('projectsController is listening');
     $('.tab-content').hide();
     $('#project-content').show();
   }
 
-  module.projectController = projectController;
+  module.projectsController = projectsController;
 })(app);

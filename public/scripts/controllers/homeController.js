@@ -5,8 +5,8 @@ var app = app || {};
   const homeController = {};
 
   homeController.init = () => {
-    $('.tab-content').hide();
-    $('#home-content').show();
+    console.log('home controller is listening');
+    $('main > section').show();
   }
 
   module.homeController = homeController;

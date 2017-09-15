@@ -1,6 +1,6 @@
 'use strict';
 
-page( '/about', app.homeController.init );
-page( '/home', app.aboutController.init );
+page( '/', app.homeController.init );
+page( '/about', app.aboutController.init );
 page( '/projects', app.projectsController.init);
 page.start();

@@ -10,7 +10,7 @@
         <title>Portfolio </title>
         <script id="handle-template" type="text/x-handlebars-template">
             <h1>{{title}}</h1>
-            <a href="{{projectLink}}"></a>
+            <a href="{{{projectLink}}}"></a>
             <div class="byline">
               By <address>{{author}}</address>
             </div>
@@ -24,10 +24,10 @@
             <nav id="main-nav">
                 <span class="nav-menu"></span>
                     <ul>
-                        <li class="tab" data-content="home" href="home">Home </li>
-                        <li class="tab" data-content="about-content" href="/about">About </li>
-                        <li class="tab" data-content="project-content" href="/projects">Projects</li>
-                        <li class=""><a href=" https://github.com/Zac-L" href="#">Contact</a></li>
+                        <li class="tab" data-content="home-content"><a href="/">Home</a></li>
+                        <li class="tab" data-content="about-content"><a href="/about">About</a></li>
+                        <li class="tab" data-content="project-content"><a href="/projects">Projects</a></li>
+                        <li class="tab"><a href=" https://github.com/Zac-L">Contact</a></li>
                     </ul>
             </nav>
         </header>
@@ -67,11 +67,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
 
 <!-- ============================= Scripts for Tokens ======================================== -->
-        <script src="gitHubToken.js"></script>
+        <!-- <script src="gitHubToken.js"></script> -->
         
-<!-- ============================= Scripts for ### ======================================== -->
+<!-- ============================= Scripts for Models ======================================== -->
         <script src="/scripts/models/app.js"></script>
-        <script src="/scripts/tab.js"></script>
+        <!-- <script src="/scripts/tab.js"></script> -->
+
+<!-- ============================= Scripts for Views ======================================== -->
+        <!-- <script src="/scripts/views/repoViews.js"></script> -->
+        <script src=""></script>
+
+<!-- ============================= Scripts for Controllers ======================================== -->
+        <script src="/scripts/controllers/homeController.js"></script>
+        <script src="/scripts/controllers/aboutController.js"></script>
+        <script src="/scripts/controllers/projectsController.js"></script>
+
+        <script src="/scripts/controllers/routes.js"></script>
         <script> app.Project.fetchAll(); </script>
     </body>
 
