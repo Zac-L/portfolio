@@ -5,8 +5,9 @@ var app = app || {};
   const homeController = {};
 
   homeController.init = () => {
-    console.log('home controller is listening');
+    console.log('home controller has loaded!');
     $('main > section').show();
+    app.Project.fetchAll();
   }
 
   module.homeController = homeController;

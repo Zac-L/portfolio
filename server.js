@@ -3,10 +3,13 @@ console.log('node had loaded!')
 
 require('dotenv').config();
 
-const pg = require('pg');
-const client = new pg.Client(process.env.DATABASE_URL);
-client.connect();
-client.on('error', err => console.error(err));
+
+//Saving the code below to possibly see if I can get a database to work how I want it to. 
+//
+// const pg = require('pg');
+// const client = new pg.Client(process.env.DATABASE_URL);
+// client.connect();
+// client.on('error', err => console.error(err));
 
 const PORT = process.env.PORT || 3000;
 const express = require('express');

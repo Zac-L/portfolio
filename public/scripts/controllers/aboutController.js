@@ -5,7 +5,7 @@ var app = app || {};
   const aboutController = {};
 
     aboutController.init = () => {
-      console.log('aboutController is listening');
+      console.log('aboutController has loaded!!');
     $('.tab-content').hide();
     $('#about-content').show();
   }

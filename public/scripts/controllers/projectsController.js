@@ -5,7 +5,7 @@ var app = app || {};
   const projectsController = {};
 
   projectsController.init = () => {
-    console.log('projectsController is listening');
+    console.log('projectsController has loaded!');
     $('.tab-content').hide();
     $('#project-content').show();
   }
